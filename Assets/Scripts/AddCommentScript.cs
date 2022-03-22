@@ -25,7 +25,7 @@ public class AddCommentScript : MonoBehaviour
     }
     private void Update()
     {
-        LayoutRebuilder.ForceRebuildLayoutImmediate(CommentSection.transform as RectTransform);
+        
         if (Input.GetKeyDown(KeyCode.Return))
         {
             AddComment();
