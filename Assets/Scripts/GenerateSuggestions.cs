@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.Scripting;
@@ -20,13 +21,15 @@ public class GenerateSuggestions : MonoBehaviour
     }
     public GameObject suggestedUserPrefab;
     private SuggestedUserData Suggestions;
-    
-    
+
+
     void Start()
     {
+        
         GetData();
         for (int i = 0; i < Suggestions.NumberOfSuggestedUsers; i++)
         {
+            
             GameObject suggestedUserElement = Instantiate(suggestedUserPrefab,transform);
             var suggestedUserScript = suggestedUserElement.GetComponent<SuggestedUserScript>();
             if (!IsValidURL(Suggestions.UserImagePath[i]))
