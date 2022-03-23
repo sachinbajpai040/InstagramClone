@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +8,13 @@ public class LikeButtonScript : MonoBehaviour
     private bool IsActive;
     public Sprite EnabledLikeButton;
     public Sprite DisabledLikeButton;
+    private Image _likeImage;
+
+    private void Awake()
+    {
+        _likeImage=LikeButton.GetComponent<Image>();
+    }
+
     void Start()
     {
         IsActive = false;
@@ -14,15 +22,27 @@ public class LikeButtonScript : MonoBehaviour
     }
     void ChangeLikeStatus()
     {
-        if (IsActive)
+        if (IsActive)//IsLiked
         {
-            LikeButton.GetComponent<Image>().sprite = DisabledLikeButton;
+            _likeImage.sprite = DisabledLikeButton;
             IsActive = false;
         }
         else
         {
-            LikeButton.GetComponent<Image>().sprite = EnabledLikeButton;
+            _likeImage.sprite = EnabledLikeButton;
             IsActive = true;
         }
+    }
+
+    void SetLiked()
+    {
+        _likeImage.sprite = EnabledLikeButton;
+        IsActive = true;
+    }
+
+    void SetNotLiked()
+    {
+        _likeImage.sprite = DisabledLikeButton;
+        IsActive = false;
     }
 }

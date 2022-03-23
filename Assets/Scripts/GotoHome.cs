@@ -9,7 +9,7 @@ public class GotoHome : MonoBehaviour
     {
         HomeButton.onClick.AddListener(SwitchScene);
     }
-    void SwitchScene()
+    public void SwitchScene()
     {
         if (SceneManager.GetActiveScene().name != "Home")
             SceneManager.LoadScene("Home");
