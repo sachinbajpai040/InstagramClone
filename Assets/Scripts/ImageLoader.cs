@@ -1,21 +1,34 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 
 public class ImageLoader:MonoBehaviour
 {
-    [SerializeField]
-    private Image Image;
+    [SerializeField] public Image image;
+
+    public SpriteRenderer spriteRenderer;
     private static readonly Vector2 VectorHalf = new Vector2(0.5f, 0.5f);
 
+
+    private void Awake()
+    {
+        spriteRenderer = image.GetComponent<SpriteRenderer>();
+    }
     public void load(string path)
     {
         
         if (!IsValidURL(path))
         {
-            StartCoroutine(Loader("file:///" + Application.dataPath+path));
+
+            Addressables.LoadAssetAsync<Sprite>(path).Completed += (go) =>
+            {
+                image.sprite = go.Result;
+            };
+            
+            //StartCoroutine(Loader("file:///" + Application.dataPath+path));
         }
         else
         {
@@ -32,10 +45,10 @@ public class ImageLoader:MonoBehaviour
         while (!urlimage.isDone)
         {
             yield return null;
-        };
-        Texture2D webTexture = ((DownloadHandlerTexture)urlimage.downloadHandler).texture as Texture2D;
+        }
+        Texture2D webTexture = ((DownloadHandlerTexture)urlimage.downloadHandler).texture;
         Sprite webSprite = SpriteFromTexture2D (webTexture);
-        Image.sprite = webSprite;
+        image.sprite = webSprite;
     }
         
     static Sprite SpriteFromTexture2D(Texture2D texture) {

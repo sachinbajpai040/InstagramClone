@@ -21,6 +21,22 @@ MonoBehaviour:
     m_Address: Assets/Prefabs/SuggestedUserDetails.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 84d77a324d64749618c535bbcab63fcc
+    m_Address: Assets/Prefabs/Post.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3be5bc5acedb042739e7932cb193bf08
+    m_Address: Assets/Images/ProfileImage/dp.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8bc7bbd0c4873425aab8456034d8bbee
+    m_Address: Assets/Images/ProfileImage/istockphoto-1343934942-612x612.jpeg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c66aa39088aa04f3297700e547217382
+    m_Address: Assets/Images/ProfileImage/png-clipart-the-avengers-logo-decal-sticker-stencil-avengers-characters-thumbnail.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: c09fd3524ebc246cfbd999dd5c5c02c2, type: 2}
   m_SchemaSet:
