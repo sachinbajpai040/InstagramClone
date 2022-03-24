@@ -12,20 +12,14 @@ public class GenerateSuggestions : MonoBehaviour
         public string OtherInfo;
         public string UserName;
     }
-
     public AssetReference SuggestedUserReference;
     public List<SuggesteduserData> suggestionlist;
-    public GameObject suggestedUserPrefab;
-
     void Start()
     {
-        
         GetData();
         List<SuggestedUserScript> list = new List<SuggestedUserScript>(10);
         for (int i = 0; i < 10; i++)
         {
-//            Debug.Log(i);
-            
             SuggestedUserReference.InstantiateAsync(transform).Completed += (go) =>
             {
                 var suggestedUserScript = go.Result.GetComponent<SuggestedUserScript>();
@@ -37,9 +31,7 @@ public class GenerateSuggestions : MonoBehaviour
                 }
             };
         }
-        
     }
-
     private void setter(List<SuggestedUserScript> list)
     {
         for (int i = 0; i < 10; i++)
@@ -47,8 +39,6 @@ public class GenerateSuggestions : MonoBehaviour
             list[i].setter(suggestionlist[i]);
         }
     }
-
-
     private void GetData()
     {
         string json = File.ReadAllText(Application.dataPath + "/Data/SuggestedUserData.json");
