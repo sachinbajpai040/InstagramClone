@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 
 public class GenerateSuggestions : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class GenerateSuggestions : MonoBehaviour
         public string UserName;
     }
 
+    public AssetReference SuggestedUserReference;
     public List<SuggesteduserData> suggestionlist;
     public GameObject suggestedUserPrefab;
 
@@ -19,12 +21,30 @@ public class GenerateSuggestions : MonoBehaviour
     {
         
         GetData();
+        List<SuggestedUserScript> list = new List<SuggestedUserScript>(10);
         for (int i = 0; i < 10; i++)
         {
+//            Debug.Log(i);
             
-            GameObject suggestedUserElement = Instantiate(suggestedUserPrefab,transform);
-            var suggestedUserScript = suggestedUserElement.GetComponent<SuggestedUserScript>();
-            suggestedUserScript.setter(suggestionlist[i]);
+            SuggestedUserReference.InstantiateAsync(transform).Completed += (go) =>
+            {
+                var suggestedUserScript = go.Result.GetComponent<SuggestedUserScript>();
+                list.Add(suggestedUserScript);
+                Debug.Log(list.Capacity);
+                if (list.Count == 10)
+                {
+                    setter(list);
+                }
+            };
+        }
+        
+    }
+
+    private void setter(List<SuggestedUserScript> list)
+    {
+        for (int i = 0; i < 10; i++)
+        {
+            list[i].setter(suggestionlist[i]);
         }
     }
 

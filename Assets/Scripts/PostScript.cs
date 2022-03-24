@@ -12,8 +12,6 @@ public class PostScript : MonoBehaviour
     public GameObject PostImage;
     public GameObject DpImage;
     public TMP_Text username;
-    
-
     public void setter(GeneratePostScript.PostDatum postdata)
     {
         Name.text = postdata.Name;

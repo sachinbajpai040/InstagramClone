@@ -15,7 +15,7 @@ public class ImageLoader:MonoBehaviour
         
         if (!IsValidURL(path))
         {
-            StartCoroutine(Loader("file:///" + path));
+            StartCoroutine(Loader("file:///" + Application.dataPath+path));
         }
         else
         {

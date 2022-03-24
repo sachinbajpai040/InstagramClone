@@ -11,7 +11,7 @@ public class SuggestedUserScript : MonoBehaviour
     {
         userName.text = suggestedUserData.UserName;
         otherInfo.text = suggestedUserData.OtherInfo;
-        Debug.Log(suggestedUserData.UserImagePath);
+        //Debug.Log(suggestedUserData.UserImagePath);
         dp.GetComponent<ImageLoader>().load(suggestedUserData.UserImagePath);
     }
 }

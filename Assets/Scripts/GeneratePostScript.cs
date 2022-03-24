@@ -25,6 +25,7 @@ public class GeneratePostScript : MonoBehaviour
     void Start()
     {
         GetData();
+        
         for (int i = 0; i < 10; i++)
         {
             var post=Instantiate(PostPrefab,transform);
@@ -35,6 +36,7 @@ public class GeneratePostScript : MonoBehaviour
     }
     private void GetData()
     {
+        Debug.Log(Application.dataPath);
         string json = File.ReadAllText(Application.dataPath + "/Data/PostData.json");
         postdata = JsonConvert.DeserializeObject<List<PostDatum>>(json);
     }
