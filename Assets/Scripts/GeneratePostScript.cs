@@ -4,11 +4,8 @@ using Newtonsoft.Json;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.UI;
-
 public class GeneratePostScript : MonoBehaviour
 {
-    public GameObject PostPrefab;
-    
     public class PostDatum
     {
         public string Name;
@@ -20,37 +17,23 @@ public class GeneratePostScript : MonoBehaviour
         public string Comment;
         public string UserName;
     }
-
     public AssetReference PostPrefabReference;
     public List<PostDatum> postdata;
     private static readonly Vector2 VectorHalf = new Vector2(0.5f, 0.5f);
-
     void Start()
     {
         GetData();
-        List<PostScript> postlist = new List<PostScript>(10);
-        for (int i = 0; i < 10; i++)
-        {
-            PostPrefabReference.InstantiateAsync(transform).Completed += (go) =>
-            {
-                var postScript = go.Result.GetComponent<PostScript>();
-                postlist.Add(postScript);
-                if (postlist.Count == 10)
-                {
-                    setter(postlist);
-                }
-            };
-        }
+        LoadPosts();
     }
-
-    private void setter(List<PostScript> postlist)
+    private async void LoadPosts()
     {
-        for (int i = 0; i < 10; i++)
+        for (var i = 0; i < postdata.Count; i++)
         {
-            postlist[i].setter(postdata[i]);
+            var post=await PostPrefabReference.InstantiateAsync(transform).Task;
+            var postScript = post.GetComponent<PostScript>();
+            postScript.setter(postdata[i]);
         }
     }
-
     private void GetData()
     {
         Debug.Log(Application.dataPath);
