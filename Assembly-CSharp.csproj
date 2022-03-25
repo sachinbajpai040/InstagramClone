@@ -695,8 +695,14 @@
  <Reference Include="Unity.2D.Tilemap.Editor">
  <HintPath>/Users/sachinbajpai/Instagram/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="UnityEditor.CacheServer">
+ <HintPath>/Users/sachinbajpai/Instagram/Library/ScriptAssemblies/UnityEditor.CacheServer.dll</HintPath>
+ </Reference>
  <Reference Include="PsdPlugin">
  <HintPath>/Users/sachinbajpai/Instagram/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Addressables">
+ <HintPath>/Users/sachinbajpai/Instagram/Library/ScriptAssemblies/Unity.Addressables.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>/Users/sachinbajpai/Instagram/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
@@ -722,8 +728,8 @@
  <Reference Include="Unity.2D.Path.Editor">
  <HintPath>/Users/sachinbajpai/Instagram/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
  </Reference>
- <Reference Include="Unity.InternalAPIEditorBridge.001">
- <HintPath>/Users/sachinbajpai/Instagram/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
+ <Reference Include="Unity.ResourceManager">
+ <HintPath>/Users/sachinbajpai/Instagram/Library/ScriptAssemblies/Unity.ResourceManager.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>/Users/sachinbajpai/Instagram/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
@@ -733,6 +739,9 @@
  </Reference>
  <Reference Include="Unity.Rider.Editor">
  <HintPath>/Users/sachinbajpai/Instagram/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.InternalAPIEditorBridge.001">
+ <HintPath>/Users/sachinbajpai/Instagram/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/Users/sachinbajpai/Instagram/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
@@ -761,8 +770,14 @@
  <Reference Include="Unity.2D.Common.Runtime">
  <HintPath>/Users/sachinbajpai/Instagram/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
  </Reference>
- <Reference Include="Unity.2D.SpriteShape.Editor">
- <HintPath>/Users/sachinbajpai/Instagram/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
+ <Reference Include="Unity.ScriptableBuildPipeline">
+ <HintPath>/Users/sachinbajpai/Instagram/Library/ScriptAssemblies/Unity.ScriptableBuildPipeline.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Addressables.Editor">
+ <HintPath>/Users/sachinbajpai/Instagram/Library/ScriptAssemblies/Unity.Addressables.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.ScriptableBuildPipeline.Editor">
+ <HintPath>/Users/sachinbajpai/Instagram/Library/ScriptAssemblies/Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Common.Editor">
  <HintPath>/Users/sachinbajpai/Instagram/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
@@ -770,23 +785,8 @@
  <Reference Include="Unity.2D.SpriteShape.Runtime">
  <HintPath>/Users/sachinbajpai/Instagram/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
  </Reference>
- <Reference Include="Unity.Addressables">
- <HintPath>/Users/sachinbajpai/Instagram/Library/ScriptAssemblies/Unity.Addressables.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Addressables.Editor">
- <HintPath>/Users/sachinbajpai/Instagram/Library/ScriptAssemblies/Unity.Addressables.Editor.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.CacheServer">
- <HintPath>/Users/sachinbajpai/Instagram/Library/ScriptAssemblies/UnityEditor.CacheServer.dll</HintPath>
- </Reference>
- <Reference Include="Unity.ResourceManager">
- <HintPath>/Users/sachinbajpai/Instagram/Library/ScriptAssemblies/Unity.ResourceManager.dll</HintPath>
- </Reference>
- <Reference Include="Unity.ScriptableBuildPipeline">
- <HintPath>/Users/sachinbajpai/Instagram/Library/ScriptAssemblies/Unity.ScriptableBuildPipeline.dll</HintPath>
- </Reference>
- <Reference Include="Unity.ScriptableBuildPipeline.Editor">
- <HintPath>/Users/sachinbajpai/Instagram/Library/ScriptAssemblies/Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
+ <Reference Include="Unity.2D.SpriteShape.Editor">
+ <HintPath>/Users/sachinbajpai/Instagram/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
