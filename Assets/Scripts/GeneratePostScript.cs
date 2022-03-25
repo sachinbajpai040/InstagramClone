@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.IO;
+using System.Threading.Tasks;
 using Newtonsoft.Json;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -20,9 +21,9 @@ public class GeneratePostScript : MonoBehaviour
     public AssetReference PostPrefabReference;
     public List<PostDatum> postdata;
     private static readonly Vector2 VectorHalf = new Vector2(0.5f, 0.5f);
-    void Start()
+    async void Start()
     {
-        GetData();
+        await GetData();
         LoadPosts();
     }
     private async void LoadPosts()
@@ -34,11 +35,11 @@ public class GeneratePostScript : MonoBehaviour
             postScript.setter(postdata[i]);
         }
     }
-    private void GetData()
+    private async Task GetData()
     {
-        Debug.Log(Application.dataPath);
-        string json = File.ReadAllText(Application.dataPath + "/Data/PostData.json");
-        postdata = JsonConvert.DeserializeObject<List<PostDatum>>(json);
+        
+        var file = await Addressables.LoadAssetAsync<TextAsset>("Data/PostData").Task;
+        postdata = JsonConvert.DeserializeObject<List<PostDatum>>(file.ToString());
     }
     private void Update()
     {

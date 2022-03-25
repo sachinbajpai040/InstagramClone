@@ -17,24 +17,32 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 41f337f15587e4cc5ac593e199483640
   m_SerializeEntries:
-  - m_GUID: 4adc82c2c68a34af08c51b5d5009b953
-    m_Address: Assets/Prefabs/SuggestedUserDetails.prefab
+  - m_GUID: 65fcd11d6845240f089eed9639f6e06e
+    m_Address: Data/PostData
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 84d77a324d64749618c535bbcab63fcc
-    m_Address: Assets/Prefabs/Post.prefab
+  - m_GUID: 0de8e6f8a453341228dfb6b7cbfff65c
+    m_Address: Data/SuggestedUserData
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 3be5bc5acedb042739e7932cb193bf08
-    m_Address: Assets/Images/ProfileImage/dp.png
+    m_Address: Images/ProfileImage/dp
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 8bc7bbd0c4873425aab8456034d8bbee
-    m_Address: Assets/Images/ProfileImage/istockphoto-1343934942-612x612.jpeg
+    m_Address: Images/ProfileImage/istockphoto-1343934942-612x612
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: c66aa39088aa04f3297700e547217382
-    m_Address: Assets/Images/ProfileImage/png-clipart-the-avengers-logo-decal-sticker-stencil-avengers-characters-thumbnail.png
+    m_Address: Images/ProfileImage/png-clipart-the-avengers-logo-decal-sticker-stencil-avengers-characters-thumbnail
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4adc82c2c68a34af08c51b5d5009b953
+    m_Address: Prefabs/SuggestedUserDetails
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 84d77a324d64749618c535bbcab63fcc
+    m_Address: Prefabs/Post
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

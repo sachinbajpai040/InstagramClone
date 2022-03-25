@@ -33,16 +33,16 @@
     "UserName":"User Name"},
 
 
-  {"UserImagePath":"Assets/Images/ProfileImage/istockphoto-1343934942-612x612.jpeg",
+  {"UserImagePath":"Images/ProfileImage/istockphoto-1343934942-612x612",
     "OtherInfo":"Other Info",
     "UserName":"User Name"},
 
 
-  {"UserImagePath":"Assets/Images/ProfileImage/dp.png",
+  {"UserImagePath":"Images/ProfileImage/dp",
     "OtherInfo":"Other Info",
     "UserName":"User Name"},
 
 
-  {"UserImagePath":"Assets/Images/ProfileImage/png-clipart-the-avengers-logo-decal-sticker-stencil-avengers-characters-thumbnail.png",
+  {"UserImagePath":"Images/ProfileImage/png-clipart-the-avengers-logo-decal-sticker-stencil-avengers-characters-thumbnail",
     "OtherInfo":"Other Info",
     "UserName":"User Name"}]
