@@ -22,7 +22,5 @@ public class PostScript : MonoBehaviour
         username.text = postdata.UserName;
         PostImage.GetComponent<ImageLoader>().load(postdata.PostImagePath);
         DpImage.GetComponent<ImageLoader>().load(postdata.UserDpPath);
-
-        
     }
 }
