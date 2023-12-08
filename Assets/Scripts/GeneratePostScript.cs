@@ -4,12 +4,19 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
-using UnityEngine.UI
+using UnityEngine.UI;
 public class GeneratePostScript : MonoBehaviour
 {
     public class PostDatum
     {
-        
+        public string Name;
+        public string Location;
+        public string PostImagePath;
+        public string UserDpPath;
+        public string Tags;
+        public string Description;
+        public string Comment;
+        public string UserName;
     }
     public AssetReference PostPrefabReference;
     public List<PostDatum> postdata;
