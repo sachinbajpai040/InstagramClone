@@ -17,6 +17,8 @@ public class GeneratePostScript : MonoBehaviour
         public string Description;
         public string Comment;
         public string UserName;
+
+        
     }
     public AssetReference PostPrefabReference;
     public List<PostDatum> postdata;
